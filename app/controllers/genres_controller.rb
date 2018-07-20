@@ -2,10 +2,6 @@ class GenresController < ApplicationController
 
   get '/genres' do
     @genres = Genre.all
-    genre1 =  Genre.create(name: "Hippity Hop")
-    genre2 =  Genre.create(name: "New Age Garbage")
-    @genres << genre1
-    @genres << genre2
     erb :'/genres/index'
   end
 
